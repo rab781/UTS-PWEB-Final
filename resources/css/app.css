@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8eef0bd;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.text-primary {
+    color: palevioletred !important;
+}
+
+.btn-primary {
+    background-color: palevioletred;
+    border-color: palevioletred;
+}
+
+.btn-primary:hover {
+    background-color: pink;
+    border-color: pink;
+}
+
+.nav-link:hover {
+    color: palevioletred !important;
+}
+
+.page-item.active .page-link {
+    background-color: palevioletred !important;
+    border-color: palevioletred !important;
+}
+.page-link {
+    color: palevioletred !important;
+}
+.page-link:hover {
+    color: pink !important;
+}
+/* CSS Kustom untuk Radio Button Pink */
+.form-check-input[type="radio"]:checked {
+    background-color: #ff69b4 !important;
+    border-color: #ff69b4 !important;
+}
+
+.form-check-input[type="radio"]:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 105, 180, 0.25) !important;
+    border-color: #ff69b4 !important;
+}
+
+.form-check-input[type="radio"] {
+    cursor: pointer;
+}
+
+select option:hover {
+    background-color: #ff69b4 !important;
+    color: white !important;
+}
+
+select.form-select {
+    cursor: pointer;
+}
+
+select option:checked,
+select option:focus {
+    background-color: #ff69b4 !important;
+    color: white !important;
+    box-shadow: 0 0 10px 100px #ff69b4 inset !important;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
