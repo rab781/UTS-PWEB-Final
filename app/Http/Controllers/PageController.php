@@ -66,13 +66,6 @@ class PageController extends Controller
     public function processLogin(Request $request)
     {
         $username = $request->input('username');
-        $password = $request->input('password');
-
-        // Simpan username dan password dalam session untuk ditampilkan di halaman profil
-        session()->put('user_credentials', [
-            'username' => $username,
-            'password' => $password
-        ]);
 
         return redirect()->route('dashboard', ['username' => $username]);
     }
@@ -131,13 +124,14 @@ class PageController extends Controller
         return view('pengelolaan', compact('artikels'));
     }
 
-    public function profile()
+    public function profile(Request $request)
     {
-        // Ambil kredensial user dari session
-        $userCredentials = session()->get('user_credentials', [
-            'username' => 'username123',
-            'password' => 'password123'
-        ]);
+        $username = $request->query('username');
+
+        $userCredentials = [
+            'username' => $username ?? 'rehan',
+            'password' => '********'
+        ];
 
         return view('profile', compact('userCredentials'));
     }
@@ -149,6 +143,12 @@ class PageController extends Controller
             'category' => 'required|string|max:100',
             'description' => 'required|string',
             'status' => 'required|in:Published,Draft'
+        ],
+        [
+            'title.required' => 'Judul artikel harus diisi.',
+            'category.required' => 'Kategori artikel harus diisi.',
+            'description.required' => 'Deskripsi artikel harus diisi.',
+            'status.required' => 'Status artikel harus dipilih.'
         ]);
 
         // Redirect ke halaman pengelolaan dengan parameter sukses

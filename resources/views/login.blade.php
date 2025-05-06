@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Login - ArticleHub')
+@section('title', 'Login - ArtikelKu')
 
 @section('content')
 <div class="container py-5">
@@ -14,7 +14,6 @@
                     </div>
 
                     <form action="{{ route('process.login') }}" method="POST">
-                        @csrf
                         <div class="mb-4">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" name="username" required>

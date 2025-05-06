@@ -12,13 +12,13 @@
                     <a class="nav-link fw-bold" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="{{ url('/dashboard') }}">Dashboard</a>
+                    <a class="nav-link fw-bold" href="{{ url('/dashboard') }}{{ request()->has('username') ? '?username='.request()->query('username') : '' }}">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bold" href="{{ url('/pengelolaan') }}">Pengelolaan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="{{ url('/profile') }}">Profile</a>
+                    <a class="nav-link fw-bold" href="{{ url('/profile') }}{{ request()->has('username') ? '?username='.request()->query('username') : '' }}">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bold" href="{{ url('/login') }}">Login</a>

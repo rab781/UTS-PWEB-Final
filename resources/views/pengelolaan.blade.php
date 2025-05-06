@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Article Management - ArticleHub')
+@section('title', 'manajemen-artikel - ArtikelKu')
 
 @section('content')
-
 <div class="container py-5">
     @if(request()->has('success'))
     <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
@@ -14,20 +13,19 @@
 
     <div class="row mb-4">
         <div class="col-md-8">
-            <h1 class="fw-bold">Article Management</h1>
-            <p class="text-muted">Manage your articles, track performance, and create new content.</p>
+            <h1 class="fw-bold">Management Artikel</h1>
+            <p class="text-muted">Crud Artikel :D</p>
         </div>
         <div class="col-md-4 text-md-end d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createArticleModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg me-2" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
                 </svg>
-                Create New Article
+                Buat Artikel
             </a>
         </div>
     </div>
 
-    <!-- Articles Table -->
     <div class="row">
         <div class="col-md-12">
             <div class="card border-0 shadow-sm">
@@ -38,8 +36,8 @@
                                 <tr>
                                     <th scope="col" class="d-none d-md-table-cell" style="width: 50px">#</th>
                                     <th scope="col">Title</th>
-                                    <th scope="col" class="d-none d-md-table-cell">Category</th>
-                                    <th scope="col" class="d-none d-md-table-cell">Date</th>
+                                    <th scope="col" class="d-none d-md-table-cell">Kategori</th>
+                                    <th scope="col" class="d-none d-md-table-cell">Tanggal</th>
                                     <th scope="col" class="d-none d-md-table-cell">Status</th>
                                     <th scope="col" class="d-none d-md-table-cell">Views</th>
                                     <th scope="col" style="width: 150px">Actions</th>

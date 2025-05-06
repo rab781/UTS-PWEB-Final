@@ -6,13 +6,12 @@
 <div class="container py-5">
     <div class="row mb-4">
         <div class="col-md-12">
-            <h1 class="fw-bold">Dasbor</h1>
+            <h1 class="fw-bold">Dashboard</h1>
             <p class="lead">Selamat datang, {{ $username }}!</p>
             <p class="text-muted">Berikut adalah ringkasan aktivitas dan statistik artikel Anda.</p>
         </div>
     </div>
 
-    <!-- Stats Cards -->
     <div class="row g-4 mb-5">
         <div class="col-6 col-md-3">
             <div class="card border-0 shadow-sm h-100">
@@ -68,7 +67,7 @@
         </div>
     </div>
 
-    <!-- Recent Articles -->
+
     <div class="row mb-4">
         <div class="col-md-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
